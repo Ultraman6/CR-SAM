@@ -17,8 +17,8 @@ from models import cifar_resnet50, cifar_resnet18, cifar_resnet101, cifar_wrn28_
 
 from utils.crsam import CRSAM, enable_running_stats, disable_running_stats
 from utils.dataset import CIFAR
-from utils.metrics import accuracy
-from utils.logger import CSVLogger, AverageMeter
+from metrics import accuracy
+from utils.logger import CSVLogger, AverageMeter, get_device
 
 from metrics.hessian import Hessian
 from metrics.metrics import grad_norm, eigen_spec
@@ -83,7 +83,7 @@ logging.basicConfig(
 )
 logging.info(args)
 
-device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
+device = get_device()
 
 #step = 1
 def run_one_epoch(phase, loader, model, criterion, optimizer, args):

@@ -17,8 +17,9 @@ from models import cifar_resnet50, cifar_resnet18, cifar_resnet101, cifar_wrn28_
 
 from utils.sam import SAM
 from utils.dataset import CIFAR
-from utils.metrics import accuracy
-from utils.logger import CSVLogger, AverageMeter
+from metrics import accuracy
+from utils.logger import CSVLogger, AverageMeter, get_device
+from utils.sram import SRAM
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset', type=str, default="cifar10", help='Dataset')
@@ -64,7 +65,7 @@ torch.manual_seed(args.seed)
 torch.cuda.manual_seed_all(args.seed)
 
 # Intialize directory and create path
-args.ckpt_dir = "./"
+args.ckpt_dir = "../utils/"
 os.makedirs(args.ckpt_dir, exist_ok=True)
 logger_name = os.path.join(args.ckpt_dir, f"gcsam_{args.model}_{args.dataset}_{args.aug}_run{args.seed}")
 
@@ -79,7 +80,7 @@ logging.basicConfig(
 )
 logging.info(args)
 
-device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
+device = get_device()
 
 def run_one_epoch(phase, loader, model, criterion, optimizer, args):
     loss, acc = AverageMeter(), AverageMeter()
@@ -183,7 +184,7 @@ def main(args):
 
     model = model.to(device)
     criterion = nn.CrossEntropyLoss()
-    optimizer = SAM(model.parameters(), optim.SGD, rho=args.rho, lr=args.lr, momentum=args.mo, weight_decay=args.wd)
+    optimizer = SRAM(model.parameters(), optim.SGD, rho=args.rho, lr=args.lr, momentum=args.mo, weight_decay=args.wd)
 
     #scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=args.milestones, gamma=0.1)
     base_optimizer = optimizer.base_optimizer

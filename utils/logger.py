@@ -37,3 +37,17 @@ class AverageMeter(object):
         self.sum += val * n
         self.count += n
         self.avg = self.sum / self.count
+
+
+import torch
+
+def get_device():
+    """
+    Returns the appropriate device based on availability: CUDA, MPS, or CPU.
+    """
+    if torch.cuda.is_available():
+        return torch.device('cuda')
+    elif torch.backends.mps.is_available():  # Check for MPS (Apple's Metal Performance Shaders)
+        return torch.device('mps')
+    else:
+        return torch.device('cpu')
