@@ -1,0 +1,47 @@
+2025-01-17 22:05:17,324 | Epoch: [0 | 200]
+2025-01-17 22:05:30,506 | Phase:train -- Batch_idx:100/391-- 971.09 samples/sec-- Loss:2.39 -- Acc:18.13
+2025-01-17 22:05:44,607 | Phase:train -- Batch_idx:200/391-- 938.36 samples/sec-- Loss:2.15 -- Acc:22.22
+2025-01-17 22:05:58,221 | Phase:train -- Batch_idx:300/391-- 938.98 samples/sec-- Loss:2.02 -- Acc:25.67
+Train Loss : 1.9335291577911378, Train Accuracy : 28.232 , round:  0
+Test Loss : 1.4793621603012086, Test Accuracy : 44.58 , round:  0
+2025-01-17 22:06:14,167 | best acc:44.58
+2025-01-17 22:06:14,245 | Epoch: [1 | 200]
+wandb: WARNING Tried to log to step 0 that is less than the current step 390. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 0 that is less than the current step 390. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-17 22:06:24,381 | Phase:train -- Batch_idx:100/391-- 1262.94 samples/sec-- Loss:1.59 -- Acc:40.06
+2025-01-17 22:06:34,801 | Phase:train -- Batch_idx:200/391-- 1245.42 samples/sec-- Loss:1.55 -- Acc:42.12
+2025-01-17 22:06:44,996 | Phase:train -- Batch_idx:300/391-- 1248.74 samples/sec-- Loss:1.52 -- Acc:43.26
+Train Loss : 1.4870505623245238, Train Accuracy : 44.658 , round:  1
+Test Loss : 1.2484891260147095, Test Accuracy : 53.24 , round:  1
+2025-01-17 22:06:55,942 | best acc:53.24
+2025-01-17 22:06:55,942 | Epoch: [2 | 200]
+wandb: WARNING Tried to log to step 1 that is less than the current step 781. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 1 that is less than the current step 781. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-17 22:07:06,895 | Phase:train -- Batch_idx:100/391-- 1168.66 samples/sec-- Loss:1.31 -- Acc:52.12
+Traceback (most recent call last):
+  File "E:\Github\CR-SAM\train\sam_train.py", line 267, in <module>
+    main(args)
+  File "E:\Github\CR-SAM\train\sam_train.py", line 225, in main
+    trainloss, trainacc = run_one_epoch('train', dataset.train, model, criterion, optimizer, args)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Github\CR-SAM\train\sam_train.py", line 108, in run_one_epoch
+    grad_f = optimizer.first_step(zero_grad=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Github\CR-SAM\utils\sam.py", line 16, in first_step
+    grad_norm = self.grad_norm()
+                ^^^^^^^^^^^^^^^^
+  File "E:\Github\CR-SAM\utils\sam.py", line 57, in grad_norm
+    torch.stack([
+                ^
+  File "E:\Github\CR-SAM\utils\sam.py", line 58, in <listcomp>
+    p.grad.norm(p=2)
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\_tensor.py", line 761, in norm
+    return torch.norm(self, p, dim, keepdim, dtype=dtype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\functional.py", line 1632, in norm
+    return torch.linalg.vector_norm(input, _p, _dim, keepdim, dtype=dtype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

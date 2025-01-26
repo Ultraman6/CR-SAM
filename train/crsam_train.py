@@ -14,11 +14,11 @@ from torchvision.models import resnet18 as imagenet_resnet18
 from torchvision.models import resnet50 as imagenet_resnet50
 from torchvision.models import resnet101 as imagenet_resnet101
 from models import cifar_resnet50, cifar_resnet18, cifar_resnet101, cifar_wrn28_10
-
-from utils.crsam import CRSAM, enable_running_stats, disable_running_stats
-from utils.dataset import CIFAR
+from util.crsam import CRSAM
+from util.utils import enable_running_stats, disable_running_stats, log_metric
+from util.dataset import CIFAR
 from metrics import accuracy
-from utils.logger import CSVLogger, AverageMeter, get_device
+from util.logger import CSVLogger, AverageMeter, get_device
 
 from metrics.hessian import Hessian
 from metrics.metrics import grad_norm, eigen_spec
@@ -224,12 +224,17 @@ def main(args):
         
         csv_logger.save_values(epoch, lr, trainloss, trainacc, valloss, valacc)
         
-        #if epoch % 10 == 0:
-        #    train_grad_norm = grad_norm(model, criterion, optimizer, dataloader=dataset.train, lp=2)
-        #    train_top_eigen, train_trace = eigen_spec(model, criterion, dataloader=dataset.train)
-        #    test_grad_norm = grad_norm(model, criterion, optimizer, dataloader=dataset.test, lp=2)
-        #    test_top_eigen, test_trace = eigen_spec(model, criterion, dataloader=dataset.test)
-        #    eigen_logger.save_values(epoch, train_top_eigen, train_trace, train_grad_norm, test_top_eigen, test_trace, test_grad_norm)
+        if epoch % 10 == 0:
+           train_grad_norm = grad_norm(model, criterion, optimizer, dataloader=dataset.train, lp=2)
+           train_top_eigen, train_trace = eigen_spec(model, criterion, dataloader=dataset.train)
+           test_grad_norm = grad_norm(model, criterion, optimizer, dataloader=dataset.test, lp=2)
+           test_top_eigen, test_trace = eigen_spec(model, criterion, dataloader=dataset.test)
+           log_metric(
+                ['Train Top Eigen', 'Train Trace', 'Train Grad Norm', 'Test Top Eigen', 'Test Trace', 'Test Grad Norm'],
+                [train_top_eigen, train_trace, train_grad_norm, test_top_eigen, test_trace, test_grad_norm],
+               epoch,
+               True
+           )
 
         scheduler.step()
 

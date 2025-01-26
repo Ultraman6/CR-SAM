@@ -1,0 +1,7 @@
+{"time":"2025-01-19T10:05:38.2087839+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.2","symlink path":"E:\\Github\\CR-SAM\\train\\wandb\\run-20250119_100537-is1xzmrk\\logs\\debug-core.log"}
+{"time":"2025-01-19T10:05:38.3180643+08:00","level":"INFO","msg":"created new stream","id":"is1xzmrk"}
+{"time":"2025-01-19T10:05:38.3180643+08:00","level":"INFO","msg":"stream: started","id":"is1xzmrk"}
+{"time":"2025-01-19T10:05:38.3180643+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"is1xzmrk"}
+{"time":"2025-01-19T10:05:38.3185837+08:00","level":"INFO","msg":"handler: started","stream_id":"is1xzmrk"}
+{"time":"2025-01-19T10:05:38.3185837+08:00","level":"INFO","msg":"sender: started","stream_id":"is1xzmrk"}
+{"time":"2025-01-19T10:05:39.0113464+08:00","level":"INFO","msg":"Starting system monitor"}

@@ -1,5 +1,5 @@
 /train/data/
-/utils/gcsam_resnet18_cifar10_basic_run0.csv
-/utils/gcsam_resnet18_cifar10_basic_run0.log
-/utils/gcsam_resnet18_cifar10_basic_run0_best.pth.tar
-/utils/gcsam_resnet18_cifar10_basic_run0_epoch_0.pth.tar
+/util/gcsam_resnet18_cifar10_basic_run0.csv
+/util/gcsam_resnet18_cifar10_basic_run0.log
+/util/gcsam_resnet18_cifar10_basic_run0_best.pth.tar
+/util/gcsam_resnet18_cifar10_basic_run0_epoch_0.pth.tar

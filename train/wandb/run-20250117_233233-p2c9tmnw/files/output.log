@@ -1,0 +1,53 @@
+2025-01-17 23:32:35,417 | Epoch: [0 | 200]
+2025-01-17 23:32:38,927 | Phase:train -- Batch_idx:100/50000-- 28.49 samples/sec-- Loss:8.24 -- Acc:0.00
+2025-01-17 23:32:41,508 | Phase:train -- Batch_idx:200/50000-- 32.84 samples/sec-- Loss:5.60 -- Acc:1.50
+2025-01-17 23:32:45,974 | Phase:train -- Batch_idx:300/50000-- 28.42 samples/sec-- Loss:4.59 -- Acc:1.00
+2025-01-17 23:32:50,675 | Phase:train -- Batch_idx:400/50000-- 26.22 samples/sec-- Loss:4.07 -- Acc:3.00
+2025-01-17 23:32:55,818 | Phase:train -- Batch_idx:500/50000-- 24.51 samples/sec-- Loss:3.75 -- Acc:4.20
+2025-01-17 23:32:58,918 | Phase:train -- Batch_idx:600/50000-- 25.53 samples/sec-- Loss:3.54 -- Acc:5.50
+2025-01-17 23:33:01,480 | Phase:train -- Batch_idx:700/50000-- 26.86 samples/sec-- Loss:3.39 -- Acc:6.14
+2025-01-17 23:33:04,331 | Phase:train -- Batch_idx:800/50000-- 27.67 samples/sec-- Loss:3.27 -- Acc:5.62
+2025-01-17 23:33:08,696 | Phase:train -- Batch_idx:900/50000-- 27.04 samples/sec-- Loss:3.17 -- Acc:5.89
+2025-01-17 23:33:13,185 | Phase:train -- Batch_idx:1000/50000-- 26.48 samples/sec-- Loss:3.10 -- Acc:6.20
+2025-01-17 23:33:17,794 | Phase:train -- Batch_idx:1100/50000-- 25.96 samples/sec-- Loss:3.04 -- Acc:6.00
+2025-01-17 23:33:22,620 | Phase:train -- Batch_idx:1200/50000-- 25.42 samples/sec-- Loss:2.99 -- Acc:5.67
+2025-01-17 23:33:27,246 | Phase:train -- Batch_idx:1300/50000-- 25.08 samples/sec-- Loss:2.94 -- Acc:5.62
+2025-01-17 23:33:32,223 | Phase:train -- Batch_idx:1400/50000-- 24.65 samples/sec-- Loss:2.91 -- Acc:5.36
+2025-01-17 23:33:37,030 | Phase:train -- Batch_idx:1500/50000-- 24.35 samples/sec-- Loss:2.88 -- Acc:5.47
+2025-01-17 23:33:41,666 | Phase:train -- Batch_idx:1600/50000-- 24.15 samples/sec-- Loss:2.85 -- Acc:5.62
+2025-01-17 23:33:46,265 | Phase:train -- Batch_idx:1700/50000-- 24.00 samples/sec-- Loss:2.83 -- Acc:5.35
+2025-01-17 23:33:50,670 | Phase:train -- Batch_idx:1800/50000-- 23.92 samples/sec-- Loss:2.81 -- Acc:5.28
+2025-01-17 23:33:55,776 | Phase:train -- Batch_idx:1900/50000-- 23.64 samples/sec-- Loss:2.79 -- Acc:5.11
+2025-01-17 23:34:00,889 | Phase:train -- Batch_idx:2000/50000-- 23.40 samples/sec-- Loss:2.78 -- Acc:5.40
+2025-01-17 23:34:05,981 | Phase:train -- Batch_idx:2100/50000-- 23.19 samples/sec-- Loss:2.76 -- Acc:5.52
+2025-01-17 23:34:09,965 | Phase:train -- Batch_idx:2200/50000-- 23.27 samples/sec-- Loss:2.75 -- Acc:5.27
+2025-01-17 23:34:12,548 | Phase:train -- Batch_idx:2300/50000-- 23.68 samples/sec-- Loss:2.74 -- Acc:5.09
+2025-01-17 23:34:15,798 | Phase:train -- Batch_idx:2400/50000-- 23.91 samples/sec-- Loss:2.73 -- Acc:5.00
+2025-01-17 23:34:20,348 | Phase:train -- Batch_idx:2500/50000-- 23.83 samples/sec-- Loss:2.72 -- Acc:4.96
+2025-01-17 23:34:25,106 | Phase:train -- Batch_idx:2600/50000-- 23.70 samples/sec-- Loss:2.71 -- Acc:4.77
+2025-01-17 23:34:29,772 | Phase:train -- Batch_idx:2700/50000-- 23.61 samples/sec-- Loss:2.70 -- Acc:4.63
+2025-01-17 23:34:34,759 | Phase:train -- Batch_idx:2800/50000-- 23.46 samples/sec-- Loss:2.70 -- Acc:4.54
+2025-01-17 23:34:38,755 | Phase:train -- Batch_idx:2900/50000-- 23.51 samples/sec-- Loss:2.69 -- Acc:4.48
+2025-01-17 23:34:41,260 | Phase:train -- Batch_idx:3000/50000-- 23.84 samples/sec-- Loss:2.68 -- Acc:4.63
+2025-01-17 23:34:43,786 | Phase:train -- Batch_idx:3100/50000-- 24.15 samples/sec-- Loss:2.68 -- Acc:4.58
+2025-01-17 23:34:46,333 | Phase:train -- Batch_idx:3200/50000-- 24.44 samples/sec-- Loss:2.67 -- Acc:4.47
+2025-01-17 23:34:48,706 | Phase:train -- Batch_idx:3300/50000-- 24.76 samples/sec-- Loss:2.67 -- Acc:4.33
+2025-01-17 23:34:51,000 | Phase:train -- Batch_idx:3400/50000-- 25.08 samples/sec-- Loss:2.66 -- Acc:4.21
+2025-01-17 23:34:53,430 | Phase:train -- Batch_idx:3500/50000-- 25.36 samples/sec-- Loss:2.66 -- Acc:4.09
+2025-01-17 23:34:56,019 | Phase:train -- Batch_idx:3600/50000-- 25.60 samples/sec-- Loss:2.66 -- Acc:4.08
+Traceback (most recent call last):
+  File "E:\Github\CR-SAM\train\sam_train.py", line 268, in <module>
+    main(args)
+  File "E:\Github\CR-SAM\train\sam_train.py", line 226, in main
+    trainloss, trainacc = run_one_epoch('train', dataset.train, model, criterion, optimizer, args)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Github\CR-SAM\train\sam_train.py", line 116, in run_one_epoch
+    grad_p = optimizer.second_step(zero_grad=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Github\CR-SAM\utils\sam.py", line 41, in second_step
+    gradients_to_update[p] = p.grad.data.clone()
+                             ^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

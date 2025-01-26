@@ -1,0 +1,16 @@
+{"time":"2025-01-17T23:15:01.4312521+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.2","symlink path":"E:\\Github\\CR-SAM\\train\\wandb\\run-20250117_231501-rumy55xg\\logs\\debug-core.log"}
+{"time":"2025-01-17T23:15:01.5447076+08:00","level":"INFO","msg":"created new stream","id":"rumy55xg"}
+{"time":"2025-01-17T23:15:01.5447076+08:00","level":"INFO","msg":"stream: started","id":"rumy55xg"}
+{"time":"2025-01-17T23:15:01.5452326+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"rumy55xg"}
+{"time":"2025-01-17T23:15:01.5452326+08:00","level":"INFO","msg":"sender: started","stream_id":"rumy55xg"}
+{"time":"2025-01-17T23:15:01.5452326+08:00","level":"INFO","msg":"handler: started","stream_id":"rumy55xg"}
+{"time":"2025-01-17T23:15:02.316081+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-17T23:15:46.8944093+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":0,"current":390}
+{"time":"2025-01-17T23:15:50.886743+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":0,"current":390}
+{"time":"2025-01-17T23:16:42.7570786+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":1,"current":781}
+{"time":"2025-01-17T23:16:46.3375826+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":1,"current":781}
+{"time":"2025-01-17T23:17:37.86983+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":2,"current":1172}
+{"time":"2025-01-17T23:17:41.8569365+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":2,"current":1172}
+{"time":"2025-01-17T23:18:08.6596332+08:00","level":"INFO","msg":"stream: closing","id":"rumy55xg"}
+{"time":"2025-01-17T23:18:08.6597391+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-17T23:18:08.6614237+08:00","level":"INFO","msg":"Stopped system monitor"}

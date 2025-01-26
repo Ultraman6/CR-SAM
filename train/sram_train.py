@@ -15,11 +15,10 @@ from torchvision.models import resnet50 as imagenet_resnet50
 from torchvision.models import resnet101 as imagenet_resnet101
 from models import cifar_resnet50, cifar_resnet18, cifar_resnet101, cifar_wrn28_10
 
-from utils.sam import SAM
-from utils.dataset import CIFAR
-from metrics import accuracy
-from utils.logger import CSVLogger, AverageMeter, get_device
-from utils.sram import SRAM
+from util.sam import SAM
+from util.dataset import CIFAR
+from metrics.accuracy import accuracy
+from util.logger import CSVLogger, AverageMeter, get_device
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset', type=str, default="cifar10", help='Dataset')
@@ -65,7 +64,7 @@ torch.manual_seed(args.seed)
 torch.cuda.manual_seed_all(args.seed)
 
 # Intialize directory and create path
-args.ckpt_dir = "../utils/"
+args.ckpt_dir = "../util/"
 os.makedirs(args.ckpt_dir, exist_ok=True)
 logger_name = os.path.join(args.ckpt_dir, f"gcsam_{args.model}_{args.dataset}_{args.aug}_run{args.seed}")
 
@@ -96,7 +95,7 @@ def run_one_epoch(phase, loader, model, criterion, optimizer, args):
                 # compute output
                 outputs = model(inputs)
                 batch_loss = criterion(outputs, targets)
-
+                batch_loss = torch.log(batch_loss + 1e-12)
                 # compute gradient and do SGD step
                 optimizer.zero_grad()
                 batch_loss.backward(retain_graph=True)
@@ -184,7 +183,7 @@ def main(args):
 
     model = model.to(device)
     criterion = nn.CrossEntropyLoss()
-    optimizer = SRAM(model.parameters(), optim.SGD, rho=args.rho, lr=args.lr, momentum=args.mo, weight_decay=args.wd)
+    optimizer = SAM(model.parameters(), optim.SGD, rho=args.rho, lr=args.lr, momentum=args.mo, weight_decay=args.wd)
 
     #scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=args.milestones, gamma=0.1)
     base_optimizer = optimizer.base_optimizer

@@ -9,16 +9,20 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
+import wandb
 
 from torchvision.models import resnet18 as imagenet_resnet18
 from torchvision.models import resnet50 as imagenet_resnet50
 from torchvision.models import resnet101 as imagenet_resnet101
+
+from metrics.metrics import grad_norm, eigen_spec
 from models import cifar_resnet50, cifar_resnet18, cifar_resnet101, cifar_wrn28_10
 
-from utils.sam import SAM
-from utils.dataset import CIFAR
+from util.sam import SAM
+from util.dataset import CIFAR
 from metrics.accuracy import accuracy
-from utils.logger import CSVLogger, AverageMeter, get_device
+from util.logger import CSVLogger, AverageMeter, get_device
+from util.utils import log_metric
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset', type=str, default="cifar10", help='Dataset')
@@ -27,13 +31,17 @@ parser.add_argument("--aug", default='basic', type=str, choices=['basic', 'cutou
 parser.add_argument('--epochs', type=int, default=200, help='Epochs')
 parser.add_argument('--alpha', type=float, default=1e5, help='alpha parameter for regularization')
 parser.add_argument('--rho', type=float, default=0.05, help='rho parameter for SAM')
-parser.add_argument('--lr', type=float, default=0.05, help='learning rate')
+parser.add_argument('--lr', type=float, default=0.01, help='learning rate')
 parser.add_argument('--bs', type=int, default=128, help='batch size')
-parser.add_argument('--mo', type=float, default=0.9, help='momentum')
-parser.add_argument('--wd', type=float, default=1e-3, help='weight decay')
+parser.add_argument('--mo', type=float, default=0, help='momentum')
+parser.add_argument('--wd', type=float, default=0, help='weight decay')
 parser.add_argument('--print_freq', type=int, default=100)
 parser.add_argument('--seed', type=int, default=0, help='seed')
 parser.add_argument('--loadckpt', default=False, action='store_true')
+
+parser.add_argument('--project_name', default='eigen test', action='store_true')
+parser.add_argument('--exp_name', default='sam', action='store_true')
+parser.add_argument('--num_limit', type=int, default=200, help='max number for train per round')
 args = parser.parse_args()
 
 if args.dataset == 'cifar10':
@@ -64,7 +72,7 @@ torch.manual_seed(args.seed)
 torch.cuda.manual_seed_all(args.seed)
 
 # Intialize directory and create path
-args.ckpt_dir = "../utils/"
+args.ckpt_dir = "../util/"
 os.makedirs(args.ckpt_dir, exist_ok=True)
 logger_name = os.path.join(args.ckpt_dir, f"gcsam_{args.model}_{args.dataset}_{args.aug}_run{args.seed}")
 
@@ -80,56 +88,66 @@ logging.basicConfig(
 logging.info(args)
 
 device = get_device()
-
+global_step = 0
 def run_one_epoch(phase, loader, model, criterion, optimizer, args):
     loss, acc = AverageMeter(), AverageMeter()
-    t = time.time()
+    # h_f_product_p, h_f_product_h, h_f_product_f = AverageMeter(), AverageMeter(), AverageMeter()
+    # h_norm, f_norm, p_norm, h_f_norm = AverageMeter(), AverageMeter(), AverageMeter(), AverageMeter()
 
+    t = time.time()
+    global global_step
+    # h_norm, f_norm, p_norm, h_f_norm = AverageMeter(), AverageMeter(), AverageMeter(), AverageMeter()
+    # h_f_product_p, h_f_product_h, h_f_product_f = AverageMeter(), AverageMeter(), AverageMeter()
+    total_num = 0
     for batch_idx, inp_data in enumerate(loader, 1):
+        # if total_num >= args.num_limit: break
         inputs, targets = inp_data
         inputs, targets = inputs.to(device), targets.to(device)
-
+        data_size = inputs.size(0)
         if phase == 'train':
             model.train()
             with torch.set_grad_enabled(True):
                 # compute output
                 outputs = model(inputs)
                 batch_loss = criterion(outputs, targets)
-
                 # compute gradient and do SGD step
                 optimizer.zero_grad()
                 batch_loss.backward(retain_graph=True)
-                
-                fisher_value_dict = {}
-                eps_value_dict = {}
-                g_norm = torch.norm(
-                    torch.stack([
-                        p.grad.norm(p=2)
-                        for group in optimizer.base_optimizer.param_groups for p in group["params"]
-                        if p.grad is not None
-                    ]),
-                    p=2
-               )
 
-                for group in optimizer.base_optimizer.param_groups:
-                    for p in group["params"]:
-                        fisher_value_dict[id(p)] = torch.square(p.grad).data
-                        eps_value_dict[id(p)] = torch.square(args.rho * p.grad.data / (g_norm + 1e-12))
-                        
-                fisher_value = torch.cat([torch.flatten(x) for x in fisher_value_dict.values()])
-                eps_value = torch.cat([torch.flatten(x) for x in eps_value_dict.values()])
-                        
-                optimizer.first_step(zero_grad=True)
+                grad_f = optimizer.first_step(zero_grad=True)
 
                 # second forward-backward pass
                 outputs = model(inputs)
                 batch_loss = criterion(outputs, targets) 
-                
-                gc_loss = torch.sum(eps_value * fisher_value)
-                #print(gc_loss)
-                batch_loss = batch_loss + args.alpha *  gc_loss
+
                 batch_loss.backward()
-                optimizer.second_step(zero_grad=True)
+                grad_p = optimizer.second_step(zero_grad=True)
+
+                # grad_h = grad_p - grad_f
+                # grad_h_f = grad_h - grad_f
+
+                # # 计算内积
+                # h_f_product_p = torch.dot(grad_h_f, grad_p).item()
+                # h_f_product_h = torch.dot(grad_h_f, grad_h).item()
+                # h_f_product_f = torch.dot(grad_h_f, grad_f).item()
+                # # 计算范数
+                # h_norm = torch.norm(grad_h).item()
+                # f_norm = torch.norm(grad_f).item()
+                # p_norm = torch.norm(grad_p).item()
+                # h_f_norm = torch.norm(grad_h_f).item()
+                # if f_norm > h_norm:
+                #     h_f_norm_std = h_f_norm / h_norm
+                # else:
+                #     h_f_norm_std = h_f_norm / f_norm
+                # log_metric(
+                #     ['h_f_product_p', 'h_f_product_h', 'h_f_product_f',
+                #      'h_norm', 'f_norm', 'p_norm', 'h_f_norm', 'h_f_norm_std'],
+                #     [h_f_product_p, h_f_product_h, h_f_product_f,
+                #         h_norm, f_norm, p_norm, h_f_norm, h_f_norm_std],
+                #     global_step,
+                # )
+                global_step += 1
+                total_num += 1
 
         elif phase == 'val':
             model.eval()
@@ -140,10 +158,10 @@ def run_one_epoch(phase, loader, model, criterion, optimizer, args):
             logging.info('Define correct phase')
             quit()
 
-        loss.update(batch_loss.item(), inputs.size(0))
+        loss.update(batch_loss.item(), data_size)
 
         batch_acc = accuracy(outputs, targets, topk=(1,))[0]
-        acc.update(float(batch_acc), inputs.size(0))
+        acc.update(float(batch_acc), data_size)
 
         if batch_idx % args.print_freq == 0:
             info = f"Phase:{phase} -- Batch_idx:{batch_idx}/{len(loader)}" \
@@ -182,11 +200,14 @@ def main(args):
 
         print("define dataset type")
 
+    args_dict = dict(vars(args))
+    wandb.init(project=args.project_name, name=args.exp_name, config=args_dict)
+
     model = model.to(device)
     criterion = nn.CrossEntropyLoss()
     optimizer = SAM(model.parameters(), optim.SGD, rho=args.rho, lr=args.lr, momentum=args.mo, weight_decay=args.wd)
 
-    #scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=args.milestones, gamma=0.1)
+    # scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=args.milestones, gamma=0.1)
     base_optimizer = optimizer.base_optimizer
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(base_optimizer, T_max=args.epochs)
     
@@ -207,12 +228,39 @@ def main(args):
         logging.info('Epoch: [%d | %d]' % (epoch, args.epochs))
 
         trainloss, trainacc = run_one_epoch('train', dataset.train, model, criterion, optimizer, args)
-        logging.info('Train_Loss = {0}, Train_acc = {1}'.format(trainloss, trainacc))
-
+        log_metric(
+            ['Train Loss', 'Train Accuracy'],
+            [trainloss, trainacc],
+            epoch,
+            True
+        )
+        # log_metric(
+        #     ['h_f_product_p', 'h_f_product_h', 'h_f_product_f',
+        #      'h_norm', 'f_norm', 'p_norm', 'h_f_norm'],
+        #     [metrics[0], metrics[1], metrics[2],
+        #         metrics[3], metrics[4], metrics[5], metrics[6]],
+        #     epoch,
+        #     True
+        # )
         valloss, valacc = run_one_epoch('val', dataset.test, model, criterion, optimizer, args)
-        logging.info('Val_Loss = {0}, Val_acc = {1}'.format(valloss, valacc))
-        
+        log_metric(
+            ['Test Loss', 'Test Accuracy'],
+            [valloss, valacc],
+            epoch,
+            True
+        )
         csv_logger.save_values(epoch, trainloss, trainacc, valloss, valacc)
+        if epoch % 10 == 0:
+           train_grad_norm = grad_norm(model, criterion, optimizer, dataloader=dataset.train, lp=2)
+           train_top_eigen, train_trace = eigen_spec(model, criterion, dataloader=dataset.train)
+           test_grad_norm = grad_norm(model, criterion, optimizer, dataloader=dataset.test, lp=2)
+           test_top_eigen, test_trace = eigen_spec(model, criterion, dataloader=dataset.test)
+           log_metric(
+                ['Train Top Eigen', 'Train Trace', 'Train Grad Norm', 'Test Top Eigen', 'Test Trace', 'Test Grad Norm'],
+                [train_top_eigen, train_trace, train_grad_norm, test_top_eigen, test_trace, test_grad_norm],
+               epoch,
+               True
+           )
 
         scheduler.step()
 
@@ -220,7 +268,7 @@ def main(args):
             state = {
                 'model': model.state_dict(),
                 'optimizer': optimizer.state_dict(),
-                'scheduler': scheduler.state_dict(),
+                # 'scheduler': scheduler.state_dict(),
                 'epoch': epoch,
                 'best_acc': best_acc
             }
@@ -232,7 +280,7 @@ def main(args):
             state = {
                 'model': model.state_dict(),
                 'optimizer': optimizer.state_dict(),
-                'scheduler': scheduler.state_dict(),
+                # 'scheduler': scheduler.state_dict(),
                 'epoch': epoch,
                 'best_acc': best_acc
             }

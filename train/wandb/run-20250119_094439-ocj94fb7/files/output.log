@@ -1,0 +1,68 @@
+2025-01-19 09:44:40,731 | Epoch: [0 | 200]
+2025-01-19 09:44:51,416 | Phase:train -- Batch_idx:100/391-- 1197.90 samples/sec-- Loss:2.69 -- Acc:7.17
+2025-01-19 09:45:00,708 | Phase:train -- Batch_idx:200/391-- 1281.44 samples/sec-- Loss:2.60 -- Acc:9.13
+Train Loss : 2.5971926152706146, Train Accuracy : 9.1328125 , round:  0
+Test Loss : 1.9593857767105103, Test Accuracy : 29.2 , round:  0
+2025-01-19 09:45:02,498 | best acc:29.2
+2025-01-19 09:45:02,571 | Epoch: [1 | 200]
+wandb: WARNING Tried to log to step 0 that is less than the current step 199. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 0 that is less than the current step 199. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-19 09:45:12,044 | Phase:train -- Batch_idx:100/391-- 1351.11 samples/sec-- Loss:2.34 -- Acc:12.94
+2025-01-19 09:45:22,093 | Phase:train -- Batch_idx:200/391-- 1311.32 samples/sec-- Loss:2.30 -- Acc:13.54
+Train Loss : 2.3028125, Train Accuracy : 13.53515625 , round:  1
+Test Loss : 1.9099493175506592, Test Accuracy : 29.41 , round:  1
+2025-01-19 09:45:24,044 | best acc:29.41
+2025-01-19 09:45:24,045 | Epoch: [2 | 200]
+wandb: WARNING Tried to log to step 1 that is less than the current step 399. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 1 that is less than the current step 399. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-19 09:45:33,973 | Phase:train -- Batch_idx:100/391-- 1289.36 samples/sec-- Loss:2.21 -- Acc:15.22
+2025-01-19 09:45:44,411 | Phase:train -- Batch_idx:200/391-- 1257.03 samples/sec-- Loss:2.19 -- Acc:15.55
+Train Loss : 2.1901647633314134, Train Accuracy : 15.55078125 , round:  2
+Test Loss : 1.8469387247085571, Test Accuracy : 31.01 , round:  2
+2025-01-19 09:45:46,344 | best acc:31.01
+2025-01-19 09:45:46,344 | Epoch: [3 | 200]
+wandb: WARNING Tried to log to step 2 that is less than the current step 599. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 2 that is less than the current step 599. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-19 09:45:56,247 | Phase:train -- Batch_idx:100/391-- 1292.60 samples/sec-- Loss:2.13 -- Acc:17.14
+2025-01-19 09:46:06,355 | Phase:train -- Batch_idx:200/391-- 1279.37 samples/sec-- Loss:2.11 -- Acc:18.04
+Train Loss : 2.11417880654335, Train Accuracy : 18.03515625 , round:  3
+Test Loss : 1.790387073135376, Test Accuracy : 35.54 , round:  3
+2025-01-19 09:46:08,177 | best acc:35.54
+2025-01-19 09:46:08,177 | Epoch: [4 | 200]
+wandb: WARNING Tried to log to step 3 that is less than the current step 799. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 3 that is less than the current step 799. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-19 09:46:18,535 | Phase:train -- Batch_idx:100/391-- 1235.80 samples/sec-- Loss:2.08 -- Acc:19.53
+2025-01-19 09:46:28,454 | Phase:train -- Batch_idx:200/391-- 1262.53 samples/sec-- Loss:2.06 -- Acc:20.01
+Train Loss : 2.0585182416439056, Train Accuracy : 20.0078125 , round:  4
+Test Loss : 1.7054459760665894, Test Accuracy : 36.76 , round:  4
+2025-01-19 09:46:30,471 | best acc:36.76
+2025-01-19 09:46:30,471 | Epoch: [5 | 200]
+wandb: WARNING Tried to log to step 4 that is less than the current step 999. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 4 that is less than the current step 999. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-19 09:46:40,602 | Phase:train -- Batch_idx:100/391-- 1263.51 samples/sec-- Loss:2.01 -- Acc:21.44
+2025-01-19 09:46:50,806 | Phase:train -- Batch_idx:200/391-- 1258.94 samples/sec-- Loss:2.01 -- Acc:21.73
+Train Loss : 2.009964505434036, Train Accuracy : 21.734375 , round:  5
+Test Loss : 1.6670274742126465, Test Accuracy : 37.89 , round:  5
+2025-01-19 09:46:52,473 | best acc:37.89
+2025-01-19 09:46:52,473 | Epoch: [6 | 200]
+wandb: WARNING Tried to log to step 5 that is less than the current step 1199. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 5 that is less than the current step 1199. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-19 09:47:02,690 | Phase:train -- Batch_idx:100/391-- 1252.80 samples/sec-- Loss:2.00 -- Acc:22.58
+2025-01-19 09:47:12,471 | Phase:train -- Batch_idx:200/391-- 1280.13 samples/sec-- Loss:1.98 -- Acc:22.78
+Train Loss : 1.9832574868202208, Train Accuracy : 22.77734375 , round:  6
+Test Loss : 1.6349170534133912, Test Accuracy : 39.6 , round:  6
+2025-01-19 09:47:14,260 | best acc:39.6
+2025-01-19 09:47:14,261 | Epoch: [7 | 200]
+wandb: WARNING Tried to log to step 6 that is less than the current step 1399. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 6 that is less than the current step 1399. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-19 09:47:24,309 | Phase:train -- Batch_idx:100/391-- 1273.88 samples/sec-- Loss:1.96 -- Acc:23.72
+Traceback (most recent call last):
+  File "E:\Github\CR-SAM\train\sam_train.py", line 278, in <module>
+    main(args)
+  File "E:\Github\CR-SAM\train\sam_train.py", line 228, in main
+    trainloss, trainacc = run_one_epoch('train', dataset.train, model, criterion, optimizer, args)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Github\CR-SAM\train\sam_train.py", line 128, in run_one_epoch
+    h_f_product_p = torch.dot(grad_h_f, grad_p).item()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

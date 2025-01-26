@@ -1,0 +1,26 @@
+{"time":"2025-01-19T01:05:39.1191707+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.2","symlink path":"E:\\Github\\CR-SAM\\train\\wandb\\run-20250119_010538-6taw76o9\\logs\\debug-core.log"}
+{"time":"2025-01-19T01:05:39.231064+08:00","level":"INFO","msg":"created new stream","id":"6taw76o9"}
+{"time":"2025-01-19T01:05:39.231064+08:00","level":"INFO","msg":"stream: started","id":"6taw76o9"}
+{"time":"2025-01-19T01:05:39.231064+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"6taw76o9"}
+{"time":"2025-01-19T01:05:39.231064+08:00","level":"INFO","msg":"sender: started","stream_id":"6taw76o9"}
+{"time":"2025-01-19T01:05:39.231064+08:00","level":"INFO","msg":"handler: started","stream_id":"6taw76o9"}
+{"time":"2025-01-19T01:05:39.8634481+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-19T01:06:05.3465274+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":0,"current":199}
+{"time":"2025-01-19T01:06:09.2275472+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":0,"current":199}
+{"time":"2025-01-19T01:06:31.5312288+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":1,"current":399}
+{"time":"2025-01-19T01:06:33.5162953+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":1,"current":399}
+{"time":"2025-01-19T01:06:53.8299327+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":2,"current":599}
+{"time":"2025-01-19T01:06:55.7623121+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":2,"current":599}
+{"time":"2025-01-19T01:07:16.1805188+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":3,"current":799}
+{"time":"2025-01-19T01:07:17.9811623+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":3,"current":799}
+{"time":"2025-01-19T01:07:38.407906+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":4,"current":999}
+{"time":"2025-01-19T01:07:40.3467942+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":4,"current":999}
+{"time":"2025-01-19T01:07:46.5529211+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/3023538364-/product%20and%20norm/6taw76o9/file_stream\": dial tcp 35.186.228.49:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-01-19T01:08:00.9084246+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":5,"current":1199}
+{"time":"2025-01-19T01:08:02.8127602+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":5,"current":1199}
+{"time":"2025-01-19T01:08:27.6733078+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":6,"current":1399}
+{"time":"2025-01-19T01:08:29.562922+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":6,"current":1399}
+{"time":"2025-01-19T01:08:50.3519191+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":7,"current":1599}
+{"time":"2025-01-19T01:08:52.5951649+08:00","level":"INFO","msg":"stream: closing","id":"6taw76o9"}
+{"time":"2025-01-19T01:08:52.5951649+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-19T01:08:52.5959649+08:00","level":"INFO","msg":"Stopped system monitor"}

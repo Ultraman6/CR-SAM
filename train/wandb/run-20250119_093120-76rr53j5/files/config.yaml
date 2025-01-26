@@ -1,0 +1,69 @@
+_wandb:
+    value:
+        cli_version: 0.19.2
+        m: []
+        python_version: 3.11.11
+        t:
+            "1":
+                - 1
+                - 41
+                - 55
+            "2":
+                - 1
+                - 41
+                - 55
+            "3":
+                - 13
+                - 16
+                - 23
+                - 55
+                - 61
+            "4": 3.11.11
+            "5": 0.19.2
+            "8":
+                - 3
+                - 5
+            "12": 0.19.2
+            "13": windows-amd64
+alpha:
+    value: 100000
+aug:
+    value: basic
+bs:
+    value: 128
+ckpt_dir:
+    value: ../util/
+data_dir:
+    value: ./data/cifar10
+dataset:
+    value: cifar10
+epochs:
+    value: 200
+exp_name:
+    value: sam
+loadckpt:
+    value: false
+lr:
+    value: 0.01
+milestones:
+    value:
+        - 100
+        - 120
+mo:
+    value: 0
+model:
+    value: resnet18
+num_classes:
+    value: 10
+num_limit:
+    value: 200
+print_freq:
+    value: 100
+project_name:
+    value: product and norm
+rho:
+    value: 0.5
+seed:
+    value: 0
+wd:
+    value: 0

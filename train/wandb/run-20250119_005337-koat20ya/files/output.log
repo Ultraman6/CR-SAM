@@ -1,0 +1,127 @@
+2025-01-19 00:53:39,255 | Epoch: [0 | 200]
+2025-01-19 00:53:50,740 | Phase:train -- Batch_idx:100/391-- 1114.59 samples/sec-- Loss:2.69 -- Acc:7.54
+2025-01-19 00:54:00,882 | Phase:train -- Batch_idx:200/391-- 1183.80 samples/sec-- Loss:2.59 -- Acc:9.16
+2025-01-19 00:54:11,007 | Phase:train -- Batch_idx:300/391-- 1209.41 samples/sec-- Loss:2.51 -- Acc:10.34
+Train Loss : 2.4534359382629396, Train Accuracy : 11.188 , round:  0
+Test Loss : 1.904162863922119, Test Accuracy : 29.8 , round:  0
+2025-01-19 00:54:23,056 | best acc:29.8
+2025-01-19 00:54:23,131 | Epoch: [1 | 200]
+wandb: WARNING Tried to log to step 0 that is less than the current step 390. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 0 that is less than the current step 390. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-19 00:54:34,695 | Phase:train -- Batch_idx:100/391-- 1106.84 samples/sec-- Loss:2.21 -- Acc:15.88
+2025-01-19 00:54:48,623 | Phase:train -- Batch_idx:200/391-- 1004.24 samples/sec-- Loss:2.20 -- Acc:16.17
+2025-01-19 00:55:01,429 | Phase:train -- Batch_idx:300/391-- 1002.66 samples/sec-- Loss:2.18 -- Acc:16.67
+Train Loss : 2.1703169396972655, Train Accuracy : 17.026 , round:  1
+Test Loss : 1.7946936918258667, Test Accuracy : 34.73 , round:  1
+2025-01-19 00:55:16,735 | best acc:34.73
+2025-01-19 00:55:16,735 | Epoch: [2 | 200]
+wandb: WARNING Tried to log to step 1 that is less than the current step 781. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 1 that is less than the current step 781. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-19 00:55:29,441 | Phase:train -- Batch_idx:100/391-- 1007.48 samples/sec-- Loss:2.10 -- Acc:18.71
+2025-01-19 00:55:41,948 | Phase:train -- Batch_idx:200/391-- 1015.39 samples/sec-- Loss:2.08 -- Acc:19.05
+2025-01-19 00:55:54,848 | Phase:train -- Batch_idx:300/391-- 1007.57 samples/sec-- Loss:2.07 -- Acc:19.57
+Train Loss : 2.0635606983184815, Train Accuracy : 19.968 , round:  2
+wandb: WARNING Tried to log to step 2 that is less than the current step 1172. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+Test Loss : 1.7080961595535278, Test Accuracy : 36.83 , round:  2
+2025-01-19 00:56:10,185 | best acc:36.83
+2025-01-19 00:56:10,185 | Epoch: [3 | 200]
+wandb: WARNING Tried to log to step 2 that is less than the current step 1172. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-19 00:56:22,879 | Phase:train -- Batch_idx:100/391-- 1008.41 samples/sec-- Loss:2.01 -- Acc:21.99
+2025-01-19 00:56:35,449 | Phase:train -- Batch_idx:200/391-- 1013.35 samples/sec-- Loss:2.00 -- Acc:22.17
+2025-01-19 00:56:47,941 | Phase:train -- Batch_idx:300/391-- 1017.07 samples/sec-- Loss:1.99 -- Acc:22.71
+Train Loss : 1.9801583448028564, Train Accuracy : 23.002 , round:  3
+Test Loss : 1.6368884531021117, Test Accuracy : 39.1 , round:  3
+2025-01-19 00:57:03,140 | best acc:39.1
+2025-01-19 00:57:03,140 | Epoch: [4 | 200]
+wandb: WARNING Tried to log to step 3 that is less than the current step 1563. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 3 that is less than the current step 1563. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-19 00:57:16,144 | Phase:train -- Batch_idx:100/391-- 984.40 samples/sec-- Loss:1.95 -- Acc:24.05
+2025-01-19 00:57:29,281 | Phase:train -- Batch_idx:200/391-- 979.33 samples/sec-- Loss:1.95 -- Acc:24.54
+2025-01-19 00:57:41,381 | Phase:train -- Batch_idx:300/391-- 1004.18 samples/sec-- Loss:1.94 -- Acc:24.75
+Train Loss : 1.933988071899414, Train Accuracy : 25.196 , round:  4
+Test Loss : 1.5971397373199463, Test Accuracy : 40.05 , round:  4
+2025-01-19 00:57:52,440 | best acc:40.05
+2025-01-19 00:57:52,441 | Epoch: [5 | 200]
+wandb: WARNING Tried to log to step 4 that is less than the current step 1954. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 4 that is less than the current step 1954. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-19 00:58:02,635 | Phase:train -- Batch_idx:100/391-- 1255.62 samples/sec-- Loss:1.91 -- Acc:26.43
+2025-01-19 00:58:14,374 | Phase:train -- Batch_idx:200/391-- 1167.18 samples/sec-- Loss:1.90 -- Acc:26.46
+2025-01-19 00:58:27,426 | Phase:train -- Batch_idx:300/391-- 1097.61 samples/sec-- Loss:1.90 -- Acc:26.61
+Train Loss : 1.894143319091797, Train Accuracy : 26.804 , round:  5
+Test Loss : 1.5464399383544922, Test Accuracy : 42.75 , round:  5
+2025-01-19 00:58:43,294 | best acc:42.75
+2025-01-19 00:58:43,294 | Epoch: [6 | 200]
+wandb: WARNING Tried to log to step 5 that is less than the current step 2345. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 5 that is less than the current step 2345. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-19 00:58:56,572 | Phase:train -- Batch_idx:100/391-- 964.04 samples/sec-- Loss:1.86 -- Acc:28.13
+2025-01-19 00:59:09,701 | Phase:train -- Batch_idx:200/391-- 969.45 samples/sec-- Loss:1.86 -- Acc:28.25
+2025-01-19 00:59:21,705 | Phase:train -- Batch_idx:300/391-- 999.74 samples/sec-- Loss:1.85 -- Acc:28.40
+Train Loss : 1.8467791803359985, Train Accuracy : 28.8 , round:  6
+Test Loss : 1.5176457931518554, Test Accuracy : 43.6 , round:  6
+2025-01-19 00:59:33,861 | best acc:43.6
+2025-01-19 00:59:33,861 | Epoch: [7 | 200]
+wandb: WARNING Tried to log to step 6 that is less than the current step 2736. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 6 that is less than the current step 2736. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-19 00:59:45,276 | Phase:train -- Batch_idx:100/391-- 1121.36 samples/sec-- Loss:1.83 -- Acc:29.30
+2025-01-19 00:59:57,842 | Phase:train -- Batch_idx:200/391-- 1067.51 samples/sec-- Loss:1.82 -- Acc:30.08
+2025-01-19 01:00:11,666 | Phase:train -- Batch_idx:300/391-- 1015.74 samples/sec-- Loss:1.82 -- Acc:30.15
+Train Loss : 1.808325368309021, Train Accuracy : 30.504 , round:  7
+Test Loss : 1.4610455947875975, Test Accuracy : 45.18 , round:  7
+2025-01-19 01:00:24,013 | best acc:45.18
+2025-01-19 01:00:24,013 | Epoch: [8 | 200]
+wandb: WARNING Tried to log to step 7 that is less than the current step 3127. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 7 that is less than the current step 3127. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+Traceback (most recent call last):
+  File "E:\Github\CR-SAM\train\sam_train.py", line 260, in <module>
+    main(args)
+  File "E:\Github\CR-SAM\train\sam_train.py", line 218, in main
+    trainloss, trainacc = run_one_epoch('train', dataset.train, model, criterion, optimizer, args)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Github\CR-SAM\train\sam_train.py", line 95, in run_one_epoch
+    for batch_idx, inp_data in enumerate(loader, 1):
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\utils\data\dataloader.py", line 630, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\utils\data\dataloader.py", line 673, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torchvision\datasets\cifar.py", line 119, in __getitem__
+    img = self.transform(img)
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torchvision\transforms\transforms.py", line 95, in __call__
+    img = t(img)
+          ^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\nn\modules\module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\nn\modules\module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torchvision\transforms\transforms.py", line 669, in forward
+    img = F.pad(img, self.padding, self.fill, self.padding_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torchvision\transforms\functional.py", line 526, in pad
+    return F_pil.pad(img, padding=padding, fill=fill, padding_mode=padding_mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torchvision\transforms\_functional_pil.py", line 175, in pad
+    opts = _parse_fill(fill, img, name="fill")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torchvision\transforms\_functional_pil.py", line 261, in _parse_fill
+    num_channels = get_image_num_channels(img)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torchvision\transforms\_functional_pil.py", line 45, in get_image_num_channels
+    return len(img.getbands())
+               ^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\PIL\Image.py", line 1392, in getbands
+    return ImageMode.getmode(self.mode).bands
+                             ^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\PIL\Image.py", line 583, in mode
+    @property
+
+KeyboardInterrupt

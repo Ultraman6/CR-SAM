@@ -1,0 +1,48 @@
+{"time":"2025-01-17T19:41:30.603201+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.2","symlink path":"E:\\Github\\CR-SAM\\train\\wandb\\run-20250117_194130-zjdty9iv\\logs\\debug-core.log"}
+{"time":"2025-01-17T19:41:30.717784+08:00","level":"INFO","msg":"created new stream","id":"zjdty9iv"}
+{"time":"2025-01-17T19:41:30.717784+08:00","level":"INFO","msg":"stream: started","id":"zjdty9iv"}
+{"time":"2025-01-17T19:41:30.717784+08:00","level":"INFO","msg":"handler: started","stream_id":"zjdty9iv"}
+{"time":"2025-01-17T19:41:30.717784+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"zjdty9iv"}
+{"time":"2025-01-17T19:41:30.717784+08:00","level":"INFO","msg":"sender: started","stream_id":"zjdty9iv"}
+{"time":"2025-01-17T19:41:31.4166086+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-17T19:42:18.6861415+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":0,"current":390}
+{"time":"2025-01-17T19:42:22.6724822+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":0,"current":390}
+{"time":"2025-01-17T19:43:09.8097137+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":1,"current":781}
+{"time":"2025-01-17T19:43:11.7615726+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":1,"current":781}
+{"time":"2025-01-17T19:43:52.1142999+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":2,"current":1172}
+{"time":"2025-01-17T19:43:54.0731628+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":2,"current":1172}
+{"time":"2025-01-17T19:44:36.1390718+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":3,"current":1563}
+{"time":"2025-01-17T19:44:37.9075933+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":3,"current":1563}
+{"time":"2025-01-17T19:45:27.2889453+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":4,"current":1954}
+{"time":"2025-01-17T19:45:30.9236608+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":4,"current":1954}
+{"time":"2025-01-17T19:46:23.233528+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":5,"current":2345}
+{"time":"2025-01-17T19:46:26.8505722+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":5,"current":2345}
+{"time":"2025-01-17T19:47:18.9225866+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":6,"current":2736}
+{"time":"2025-01-17T19:47:22.4525041+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":6,"current":2736}
+{"time":"2025-01-17T19:48:06.8900421+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":7,"current":3127}
+{"time":"2025-01-17T19:48:08.648213+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":7,"current":3127}
+{"time":"2025-01-17T19:48:48.8887763+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":8,"current":3518}
+{"time":"2025-01-17T19:48:50.7221939+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":8,"current":3518}
+{"time":"2025-01-17T19:49:30.8718438+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":9,"current":3909}
+{"time":"2025-01-17T19:49:32.7780942+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":9,"current":3909}
+{"time":"2025-01-17T19:50:12.6598025+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":10,"current":4300}
+{"time":"2025-01-17T19:50:14.5652581+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":10,"current":4300}
+{"time":"2025-01-17T19:50:53.9862305+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":11,"current":4691}
+{"time":"2025-01-17T19:50:55.8083772+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":11,"current":4691}
+{"time":"2025-01-17T19:51:36.1907415+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":12,"current":5082}
+{"time":"2025-01-17T19:51:38.1155223+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":12,"current":5082}
+{"time":"2025-01-17T19:52:18.4301971+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":13,"current":5473}
+{"time":"2025-01-17T19:52:20.3466924+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":13,"current":5473}
+{"time":"2025-01-17T19:53:01.1922139+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":14,"current":5864}
+{"time":"2025-01-17T19:53:04.9130161+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":14,"current":5864}
+{"time":"2025-01-17T19:53:55.5978717+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":15,"current":6255}
+{"time":"2025-01-17T19:53:59.1186399+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":15,"current":6255}
+{"time":"2025-01-17T19:54:49.1518407+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":16,"current":6646}
+{"time":"2025-01-17T19:54:52.6878461+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":16,"current":6646}
+{"time":"2025-01-17T19:55:42.937484+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":17,"current":7037}
+{"time":"2025-01-17T19:55:46.4444819+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":17,"current":7037}
+{"time":"2025-01-17T19:56:37.6777252+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":18,"current":7428}
+{"time":"2025-01-17T19:56:41.4045578+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":18,"current":7428}
+{"time":"2025-01-17T19:57:23.4703608+08:00","level":"INFO","msg":"stream: closing","id":"zjdty9iv"}
+{"time":"2025-01-17T19:57:23.4703608+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-17T19:57:23.4710166+08:00","level":"INFO","msg":"Stopped system monitor"}

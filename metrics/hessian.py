@@ -1,8 +1,11 @@
+from concurrent.futures.thread import ThreadPoolExecutor
+
 import torch
 import numpy as np
+from tqdm import tqdm
 
 
-class Hessian():
+class Hessian:
     """
     The class used to compute :
         i) the top 1 (n) eigenvalue(s) of the neural network
@@ -86,7 +89,7 @@ class Hessian():
 
     def eigenvalues(self, maxIter=100, tol=1e-3, top_n=1):
         """
-        compute the top_n eigenvalues using power iteration method
+        Compute the top_n eigenvalues using power iteration method with multi-threading.
         maxIter: maximum iterations used to compute each single eigenvalue
         tol: the relative tolerance between two consecutive eigenvalue computations from power iteration
         top_n: top top_n eigenvalues will be computed
@@ -95,16 +98,12 @@ class Hessian():
         assert top_n >= 1
 
         device = self.device
-
         eigenvalues = []
         eigenvectors = []
 
-        computed_dim = 0
-
-        while computed_dim < top_n:
+        def compute_single_eigenvalue(computed_dim):
             eigenvalue = None
-            v = [torch.randn(p.size()).to(device) for p in self.params
-                ]  # generate random vector
+            v = [torch.randn(p.size()).to(device) for p in self.params]  # generate random vector
             v = normalization(v)  # normalize the vector
 
             for i in range(maxIter):
@@ -119,17 +118,34 @@ class Hessian():
 
                 v = normalization(Hv)
 
-                if eigenvalue == None:
+                if eigenvalue is None:
                     eigenvalue = tmp_eigenvalue
                 else:
-                    if abs(eigenvalue - tmp_eigenvalue) / (abs(eigenvalue) +
-                                                           1e-6) < tol:
+                    if abs(eigenvalue - tmp_eigenvalue) / (abs(eigenvalue) + 1e-6) < tol:
                         break
                     else:
                         eigenvalue = tmp_eigenvalue
+
             eigenvalues.append(eigenvalue)
             eigenvectors.append(v)
-            computed_dim += 1
+
+            # Update the tqdm progress bar from within the thread
+            tqdm.write(f"Completed eigenvalue {computed_dim + 1}/{top_n}")
+
+        # Use ThreadPoolExecutor to parallelize the computation of eigenvalues
+        with ThreadPoolExecutor(max_workers=5) as executor:
+            # Wrap the loop with tqdm to add a progress bar for the eigenvalue computations
+            with tqdm(total=top_n, desc="Computing Eigenvalues", unit="eigenvalue") as pbar:
+                # Submit a task for each eigenvalue computation
+                futures = []
+                for computed_dim in range(top_n):
+                    future = executor.submit(compute_single_eigenvalue, computed_dim)
+                    future.add_done_callback(lambda p: pbar.update(1))  # Update the progress bar after each task
+                    futures.append(future)
+
+                # Wait for all threads to complete
+                for future in futures:
+                    future.result()
 
         return eigenvalues, eigenvectors
 
@@ -144,7 +160,8 @@ class Hessian():
         trace_vhv = []
         trace = 0.
 
-        for i in range(maxIter):
+        # Wrap the loop with tqdm to add a progress bar
+        for _ in tqdm(range(maxIter), desc="Computing Trace", unit="iteration"):
             self.model.zero_grad()
             v = [
                 torch.randint_like(p, high=2, device=device)
@@ -159,6 +176,7 @@ class Hessian():
             else:
                 Hv = hessian_vector_product(self.gradsH, self.params, v)
             trace_vhv.append(group_product(Hv, v).cpu().item())
+
             if abs(np.mean(trace_vhv) - trace) / (abs(trace) + 1e-6) < tol:
                 return trace_vhv
             else:

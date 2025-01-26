@@ -1,0 +1,26 @@
+{"time":"2025-01-19T09:35:41.7825923+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.2","symlink path":"E:\\Github\\CR-SAM\\train\\wandb\\run-20250119_093541-bks2pv5d\\logs\\debug-core.log"}
+{"time":"2025-01-19T09:35:41.8927742+08:00","level":"INFO","msg":"created new stream","id":"bks2pv5d"}
+{"time":"2025-01-19T09:35:41.8927742+08:00","level":"INFO","msg":"stream: started","id":"bks2pv5d"}
+{"time":"2025-01-19T09:35:41.8927742+08:00","level":"INFO","msg":"handler: started","stream_id":"bks2pv5d"}
+{"time":"2025-01-19T09:35:41.8927742+08:00","level":"INFO","msg":"sender: started","stream_id":"bks2pv5d"}
+{"time":"2025-01-19T09:35:41.8927742+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"bks2pv5d"}
+{"time":"2025-01-19T09:35:42.5360686+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-19T09:36:03.9230082+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":0,"current":199}
+{"time":"2025-01-19T09:36:05.7254824+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":0,"current":199}
+{"time":"2025-01-19T09:36:26.0784602+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":1,"current":399}
+{"time":"2025-01-19T09:36:27.8299238+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":1,"current":399}
+{"time":"2025-01-19T09:36:48.0691422+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":2,"current":599}
+{"time":"2025-01-19T09:36:50.1852529+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":2,"current":599}
+{"time":"2025-01-19T09:37:10.0438195+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":3,"current":799}
+{"time":"2025-01-19T09:37:11.7232297+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":3,"current":799}
+{"time":"2025-01-19T09:37:31.5850054+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":4,"current":999}
+{"time":"2025-01-19T09:37:33.3096334+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":4,"current":999}
+{"time":"2025-01-19T09:37:52.6653113+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":5,"current":1199}
+{"time":"2025-01-19T09:37:54.350941+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":5,"current":1199}
+{"time":"2025-01-19T09:38:13.5364921+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":6,"current":1399}
+{"time":"2025-01-19T09:38:15.0783757+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":6,"current":1399}
+{"time":"2025-01-19T09:38:34.9701397+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":7,"current":1599}
+{"time":"2025-01-19T09:38:36.7481962+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":7,"current":1599}
+{"time":"2025-01-19T09:38:52.7736672+08:00","level":"INFO","msg":"stream: closing","id":"bks2pv5d"}
+{"time":"2025-01-19T09:38:52.7736672+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-19T09:38:52.7736672+08:00","level":"INFO","msg":"Stopped system monitor"}

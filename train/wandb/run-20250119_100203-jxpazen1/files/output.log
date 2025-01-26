@@ -1,0 +1,87 @@
+2025-01-19 10:02:04,746 | Epoch: [0 | 200]
+2025-01-19 10:02:15,093 | Phase:train -- Batch_idx:100/391-- 1237.16 samples/sec-- Loss:2.23 -- Acc:15.47
+2025-01-19 10:02:25,246 | Phase:train -- Batch_idx:200/391-- 1248.81 samples/sec-- Loss:2.09 -- Acc:20.52
+2025-01-19 10:02:35,047 | Phase:train -- Batch_idx:300/391-- 1267.28 samples/sec-- Loss:2.00 -- Acc:23.83
+Train Loss : 1.939407179336548, Train Accuracy : 26.18 , round:  0
+2025-01-19 10:02:45,003 | Define correct phase
+2025-01-19 10:02:45,024 | Define correct phase
+2025-01-19 10:02:45,044 | Define correct phase
+2025-01-19 10:02:45,063 | Define correct phase
+2025-01-19 10:02:45,084 | Define correct phase
+2025-01-19 10:02:45,105 | Define correct phase
+2025-01-19 10:02:45,126 | Define correct phase
+2025-01-19 10:02:45,144 | Define correct phase
+2025-01-19 10:02:45,165 | Define correct phase
+2025-01-19 10:02:45,186 | Define correct phase
+2025-01-19 10:02:45,211 | Define correct phase
+2025-01-19 10:02:45,234 | Define correct phase
+2025-01-19 10:02:45,256 | Define correct phase
+2025-01-19 10:02:45,280 | Define correct phase
+2025-01-19 10:02:45,302 | Define correct phase
+2025-01-19 10:02:45,324 | Define correct phase
+2025-01-19 10:02:45,346 | Define correct phase
+2025-01-19 10:02:45,366 | Define correct phase
+2025-01-19 10:02:45,385 | Define correct phase
+2025-01-19 10:02:45,406 | Define correct phase
+2025-01-19 10:02:45,428 | Define correct phase
+2025-01-19 10:02:45,452 | Define correct phase
+2025-01-19 10:02:45,475 | Define correct phase
+2025-01-19 10:02:45,498 | Define correct phase
+2025-01-19 10:02:45,521 | Define correct phase
+2025-01-19 10:02:45,542 | Define correct phase
+2025-01-19 10:02:45,565 | Define correct phase
+2025-01-19 10:02:45,586 | Define correct phase
+2025-01-19 10:02:45,608 | Define correct phase
+2025-01-19 10:02:45,629 | Define correct phase
+2025-01-19 10:02:45,652 | Define correct phase
+2025-01-19 10:02:45,676 | Define correct phase
+2025-01-19 10:02:45,700 | Define correct phase
+2025-01-19 10:02:45,723 | Define correct phase
+2025-01-19 10:02:45,745 | Define correct phase
+2025-01-19 10:02:45,766 | Define correct phase
+2025-01-19 10:02:45,790 | Define correct phase
+2025-01-19 10:02:45,812 | Define correct phase
+2025-01-19 10:02:45,834 | Define correct phase
+2025-01-19 10:02:45,857 | Define correct phase
+2025-01-19 10:02:45,885 | Define correct phase
+2025-01-19 10:02:45,910 | Define correct phase
+2025-01-19 10:02:45,936 | Define correct phase
+2025-01-19 10:02:45,959 | Define correct phase
+2025-01-19 10:02:45,981 | Define correct phase
+2025-01-19 10:02:46,002 | Define correct phase
+2025-01-19 10:02:46,025 | Define correct phase
+2025-01-19 10:02:46,045 | Define correct phase
+2025-01-19 10:02:46,067 | Define correct phase
+2025-01-19 10:02:46,091 | Define correct phase
+2025-01-19 10:02:46,116 | Define correct phase
+2025-01-19 10:02:46,138 | Define correct phase
+2025-01-19 10:02:46,161 | Define correct phase
+2025-01-19 10:02:46,183 | Define correct phase
+2025-01-19 10:02:46,204 | Define correct phase
+2025-01-19 10:02:46,225 | Define correct phase
+2025-01-19 10:02:46,246 | Define correct phase
+2025-01-19 10:02:46,269 | Define correct phase
+2025-01-19 10:02:46,295 | Define correct phase
+2025-01-19 10:02:46,322 | Define correct phase
+2025-01-19 10:02:46,352 | Define correct phase
+2025-01-19 10:02:46,376 | Define correct phase
+2025-01-19 10:02:46,400 | Define correct phase
+2025-01-19 10:02:46,423 | Define correct phase
+2025-01-19 10:02:46,447 | Define correct phase
+2025-01-19 10:02:46,469 | Define correct phase
+2025-01-19 10:02:46,490 | Define correct phase
+2025-01-19 10:02:46,512 | Define correct phase
+2025-01-19 10:02:46,534 | Define correct phase
+2025-01-19 10:02:46,558 | Define correct phase
+2025-01-19 10:02:46,579 | Define correct phase
+2025-01-19 10:02:46,599 | Define correct phase
+2025-01-19 10:02:46,618 | Define correct phase
+2025-01-19 10:02:46,640 | Define correct phase
+2025-01-19 10:02:46,661 | Define correct phase
+2025-01-19 10:02:46,680 | Define correct phase
+2025-01-19 10:02:46,701 | Define correct phase
+2025-01-19 10:02:46,722 | Define correct phase
+2025-01-19 10:02:46,868 | Define correct phase
+Test Loss : 1.4518610727310182, Test Accuracy : 45.64 , round:  0
+D:\anaconda3\envs\pfllib\Lib\site-packages\torch\autograd\graph.py:769: UserWarning: Using backward() with create_graph=True will create a reference cycle between the parameter and its gradient which can cause a memory leak. We recommend using autograd.grad when creating the graph to avoid this. If you have to use this function, make sure to reset the .grad fields of your parameters to None after use to break the cycle and avoid the leak. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\torch\csrc\autograd\engine.cpp:1208.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass

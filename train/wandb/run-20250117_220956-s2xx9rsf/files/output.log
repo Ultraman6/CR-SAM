@@ -1,0 +1,55 @@
+2025-01-17 22:09:58,308 | Epoch: [0 | 200]
+2025-01-17 22:10:09,076 | Phase:train -- Batch_idx:100/391-- 1188.68 samples/sec-- Loss:2.66 -- Acc:11.08
+2025-01-17 22:10:22,575 | Phase:train -- Batch_idx:200/391-- 1054.92 samples/sec-- Loss:2.40 -- Acc:14.10
+2025-01-17 22:10:34,922 | Phase:train -- Batch_idx:300/391-- 1048.77 samples/sec-- Loss:2.27 -- Acc:16.69
+Train Loss : 2.199415841293335, Train Accuracy : 18.292 , round:  0
+Test Loss : 1.6494807937622071, Test Accuracy : 38.72 , round:  0
+2025-01-17 22:10:46,971 | best acc:38.72
+2025-01-17 22:10:47,049 | Epoch: [1 | 200]
+wandb: WARNING Tried to log to step 0 that is less than the current step 390. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+wandb: WARNING Tried to log to step 0 that is less than the current step 390. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-17 22:10:57,185 | Phase:train -- Batch_idx:100/391-- 1262.87 samples/sec-- Loss:1.88 -- Acc:27.58
+2025-01-17 22:11:07,390 | Phase:train -- Batch_idx:200/391-- 1258.58 samples/sec-- Loss:1.86 -- Acc:28.57
+2025-01-17 22:11:17,354 | Phase:train -- Batch_idx:300/391-- 1267.14 samples/sec-- Loss:1.84 -- Acc:29.51
+Train Loss : 1.821438625869751, Train Accuracy : 30.274 , round:  1
+wandb: WARNING Tried to log to step 1 that is less than the current step 781. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+Test Loss : 1.4588289707183837, Test Accuracy : 45.59 , round:  1
+2025-01-17 22:11:28,409 | best acc:45.59
+2025-01-17 22:11:28,409 | Epoch: [2 | 200]
+wandb: WARNING Tried to log to step 1 that is less than the current step 781. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+2025-01-17 22:11:41,647 | Phase:train -- Batch_idx:100/391-- 967.02 samples/sec-- Loss:1.70 -- Acc:35.55
+2025-01-17 22:11:54,665 | Phase:train -- Batch_idx:200/391-- 975.08 samples/sec-- Loss:1.68 -- Acc:36.33
+2025-01-17 22:12:04,832 | Phase:train -- Batch_idx:300/391-- 1054.31 samples/sec-- Loss:1.66 -- Acc:37.15
+Traceback (most recent call last):
+  File "E:\Github\CR-SAM\train\sam_train.py", line 267, in <module>
+    main(args)
+  File "E:\Github\CR-SAM\train\sam_train.py", line 225, in main
+    trainloss, trainacc = run_one_epoch('train', dataset.train, model, criterion, optimizer, args)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Github\CR-SAM\train\sam_train.py", line 93, in run_one_epoch
+    for batch_idx, inp_data in enumerate(loader, 1):
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\utils\data\dataloader.py", line 630, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\utils\data\dataloader.py", line 673, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torchvision\datasets\cifar.py", line 119, in __getitem__
+    img = self.transform(img)
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torchvision\transforms\transforms.py", line 95, in __call__
+    img = t(img)
+          ^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torchvision\transforms\transforms.py", line 137, in __call__
+    return F.to_tensor(pic)
+           ^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torchvision\transforms\functional.py", line 176, in to_tensor
+    return img.to(dtype=default_float_dtype).div(255)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,14 @@
+{"time":"2025-01-17T22:07:32.1296435+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.2","symlink path":"E:\\Github\\CR-SAM\\train\\wandb\\run-20250117_220731-hevhgrza\\logs\\debug-core.log"}
+{"time":"2025-01-17T22:07:32.2402923+08:00","level":"INFO","msg":"created new stream","id":"hevhgrza"}
+{"time":"2025-01-17T22:07:32.2408024+08:00","level":"INFO","msg":"stream: started","id":"hevhgrza"}
+{"time":"2025-01-17T22:07:32.2408024+08:00","level":"INFO","msg":"sender: started","stream_id":"hevhgrza"}
+{"time":"2025-01-17T22:07:32.2408024+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"hevhgrza"}
+{"time":"2025-01-17T22:07:32.2408024+08:00","level":"INFO","msg":"handler: started","stream_id":"hevhgrza"}
+{"time":"2025-01-17T22:07:32.9482935+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-17T22:08:20.2493352+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":0,"current":390}
+{"time":"2025-01-17T22:08:22.0655503+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":0,"current":390}
+{"time":"2025-01-17T22:09:06.6004609+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":1,"current":781}
+{"time":"2025-01-17T22:09:08.1932374+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":1,"current":781}
+{"time":"2025-01-17T22:09:44.5397002+08:00","level":"INFO","msg":"stream: closing","id":"hevhgrza"}
+{"time":"2025-01-17T22:09:44.5397002+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-17T22:09:44.5402023+08:00","level":"INFO","msg":"Stopped system monitor"}

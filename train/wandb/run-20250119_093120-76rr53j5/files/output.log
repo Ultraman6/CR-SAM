@@ -1,0 +1,14 @@
+2025-01-19 09:31:21,911 | Epoch: [0 | 200]
+2025-01-19 09:31:32,592 | Phase:train -- Batch_idx:100/391-- 1198.42 samples/sec-- Loss:3.19 -- Acc:7.48
+2025-01-19 09:31:42,763 | Phase:train -- Batch_idx:200/391-- 1227.74 samples/sec-- Loss:2.99 -- Acc:7.00
+Train Loss : 2.989988009929657, Train Accuracy : 6.99609375 , round:  0
+Traceback (most recent call last):
+  File "E:\Github\CR-SAM\train\sam_train.py", line 275, in <module>
+    main(args)
+  File "E:\Github\CR-SAM\train\sam_train.py", line 240, in main
+    valloss, valacc = run_one_epoch('val', dataset.test, model, criterion, optimizer, args)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Github\CR-SAM\train\sam_train.py", line 156, in run_one_epoch
+    loss.update(batch_loss.item(), data_size)
+                                   ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'data_size' where it is not associated with a value

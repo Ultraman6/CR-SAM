@@ -1,0 +1,14 @@
+{"time":"2025-01-17T22:05:15.9450119+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.2","symlink path":"E:\\Github\\CR-SAM\\train\\wandb\\run-20250117_220515-16l6jhqd\\logs\\debug-core.log"}
+{"time":"2025-01-17T22:05:16.0551953+08:00","level":"INFO","msg":"created new stream","id":"16l6jhqd"}
+{"time":"2025-01-17T22:05:16.0551953+08:00","level":"INFO","msg":"stream: started","id":"16l6jhqd"}
+{"time":"2025-01-17T22:05:16.0551953+08:00","level":"INFO","msg":"handler: started","stream_id":"16l6jhqd"}
+{"time":"2025-01-17T22:05:16.0551953+08:00","level":"INFO","msg":"sender: started","stream_id":"16l6jhqd"}
+{"time":"2025-01-17T22:05:16.0554442+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"16l6jhqd"}
+{"time":"2025-01-17T22:05:16.8091272+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-17T22:06:11.2428036+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":0,"current":390}
+{"time":"2025-01-17T22:06:14.081919+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":0,"current":390}
+{"time":"2025-01-17T22:06:54.2422071+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":1,"current":781}
+{"time":"2025-01-17T22:06:55.8592256+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":1,"current":781}
+{"time":"2025-01-17T22:07:12.5369643+08:00","level":"INFO","msg":"stream: closing","id":"16l6jhqd"}
+{"time":"2025-01-17T22:07:12.5369643+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-17T22:07:12.5384786+08:00","level":"INFO","msg":"Stopped system monitor"}

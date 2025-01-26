@@ -1,0 +1,142 @@
+2025-01-17 11:47:35,525 | Epoch: [0 | 200]
+2025-01-17 11:47:47,183 | Phase:train -- Batch_idx:100/391-- 1098.00 samples/sec-- Loss:2.39 -- Acc:19.14
+2025-01-17 11:47:57,962 | Phase:train -- Batch_idx:200/391-- 1140.97 samples/sec-- Loss:2.13 -- Acc:23.46
+2025-01-17 11:48:08,619 | Phase:train -- Batch_idx:300/391-- 1160.33 samples/sec-- Loss:2.00 -- Acc:27.39
+--- Logging error ---
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\pfllib\Lib\logging\__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\logging\__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\logging\__init__.py", line 687, in format
+    record.message = record.getMessage()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\logging\__init__.py", line 377, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "E:\Github\CR-SAM\train\gsam_train.py", line 225, in <module>
+    if __name__ == '__main__':
+  File "E:\Github\CR-SAM\train\gsam_train.py", line 186, in main
+    trainloss, trainacc = run_one_epoch('train', dataset.train, model, criterion, optimizer, args)
+  File "E:\Github\CR-SAM\utils\utils.py", line 27, in log_metric
+    logging.info(', '.join(labels), ", round: ", round)
+Message: 'Train Loss : 1.9153920795440673, Train Accuracy : 29.762'
+Arguments: (', round: ', 0)
+--- Logging error ---
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\pfllib\Lib\logging\__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\logging\__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\logging\__init__.py", line 687, in format
+    record.message = record.getMessage()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\logging\__init__.py", line 377, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "E:\Github\CR-SAM\train\gsam_train.py", line 225, in <module>
+    if __name__ == '__main__':
+  File "E:\Github\CR-SAM\train\gsam_train.py", line 186, in main
+    trainloss, trainacc = run_one_epoch('train', dataset.train, model, criterion, optimizer, args)
+  File "E:\Github\CR-SAM\utils\utils.py", line 27, in log_metric
+    logging.info(', '.join(labels), ", round: ", round)
+Message: 'Train Loss : 1.9153920795440673, Train Accuracy : 29.762'
+Arguments: (', round: ', 0)
+--- Logging error ---
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\pfllib\Lib\logging\__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\logging\__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\logging\__init__.py", line 687, in format
+    record.message = record.getMessage()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\logging\__init__.py", line 377, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "E:\Github\CR-SAM\train\gsam_train.py", line 225, in <module>
+    if __name__ == '__main__':
+  File "E:\Github\CR-SAM\train\gsam_train.py", line 192, in main
+    valloss, valacc = run_one_epoch('val', dataset.test, model, criterion, optimizer, args)
+  File "E:\Github\CR-SAM\utils\utils.py", line 27, in log_metric
+    logging.info(', '.join(labels), ", round: ", round)
+Message: 'Test Loss : 1.5774244161605835, Test Accuracy : 40.58'
+Arguments: (', round: ', 0)
+--- Logging error ---
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\pfllib\Lib\logging\__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\logging\__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\logging\__init__.py", line 687, in format
+    record.message = record.getMessage()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\logging\__init__.py", line 377, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "E:\Github\CR-SAM\train\gsam_train.py", line 225, in <module>
+    if __name__ == '__main__':
+  File "E:\Github\CR-SAM\train\gsam_train.py", line 192, in main
+    valloss, valacc = run_one_epoch('val', dataset.test, model, criterion, optimizer, args)
+  File "E:\Github\CR-SAM\utils\utils.py", line 27, in log_metric
+    logging.info(', '.join(labels), ", round: ", round)
+Message: 'Test Loss : 1.5774244161605835, Test Accuracy : 40.58'
+Arguments: (', round: ', 0)
+2025-01-17 11:48:20,828 | best acc:40.58
+2025-01-17 11:48:20,930 | Epoch: [1 | 200]
+2025-01-17 11:48:31,722 | Phase:train -- Batch_idx:100/391-- 1186.11 samples/sec-- Loss:1.56 -- Acc:41.69
+2025-01-17 11:48:42,460 | Phase:train -- Batch_idx:200/391-- 1189.05 samples/sec-- Loss:1.52 -- Acc:43.14
+Traceback (most recent call last):
+  File "E:\Github\CR-SAM\train\gsam_train.py", line 225, in <module>
+    if __name__ == '__main__':
+        ^^^^^^^^^^
+  File "E:\Github\CR-SAM\train\gsam_train.py", line 185, in main
+  File "E:\Github\CR-SAM\train\gsam_train.py", line 97, in run_one_epoch
+    for batch_idx, inp_data in enumerate(loader, 1):
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\utils\data\dataloader.py", line 630, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\utils\data\dataloader.py", line 673, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torchvision\datasets\cifar.py", line 119, in __getitem__
+    img = self.transform(img)
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torchvision\transforms\transforms.py", line 95, in __call__
+    img = t(img)
+          ^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\nn\modules\module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torch\nn\modules\module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torchvision\transforms\transforms.py", line 681, in forward
+    i, j, h, w = self.get_params(img, self.size)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\pfllib\Lib\site-packages\torchvision\transforms\transforms.py", line 645, in get_params
+    i = torch.randint(0, h - th + 1, size=(1,)).item()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
